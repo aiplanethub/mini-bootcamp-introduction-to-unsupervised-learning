@@ -1,4 +1,4 @@
-# Module 1: Introduction
+# Introduction
 
 ## Learning Objectives
 
@@ -24,7 +24,7 @@ Unsupervised learning is where you have unlabeled data (or no target variable) i
 
 The goal of Unsupervised Learning Algorithms is to **find some structure in the dataset**.
 
-These are called unsupervised learning algorithms because unlike supervised learning, there are no correct answers and there is no teacher. Algorithms are left to their own to discover and present the interesting structure in the data.
+These are called unsupervised learning algorithms because, unlike supervised learning, there are no correct answers and there is no teacher. Algorithms are left on their own to discover and present the interesting structure in the data.
 
 **Unsupervised Learning = Learning without labels**
 
@@ -56,7 +56,7 @@ Due to this cognitive power to draw insights, deduce patterns from the data, and
 
 Market segmentation is the practice of dividing consumers into groups based on shared needs, desires, and preferences. Using these categories, a business can adjust its product lines and marketing techniques to appeal to each group more eﬀectively by addressing their specific needs.
 
-E.g., A vehicle manufacturer that sells a luxury, higher end car brand would likely target an audience that has a higher income.
+E.g., A vehicle manufacturer that sells a luxury, high-end car brand would likely target an audience that has a higher income.
 
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_96c50459c71244ac9725a5e3574ebb0d.png)
@@ -80,7 +80,7 @@ Eg. Social Network Sites like Facebook use SNA to identify and recommend potenti
 
 * **Astronomical Data Analysis**
 
-“A simple visualization of a complicated data makes the science behind it seem obvious.” Unsupervised learning techniques help in clustering the galaxies based on certain characteristics.
+“A simple visualization of complicated data makes the science behind it seem obvious.” Unsupervised learning techniques help in clustering the galaxies based on certain characteristics.
 
 
 
