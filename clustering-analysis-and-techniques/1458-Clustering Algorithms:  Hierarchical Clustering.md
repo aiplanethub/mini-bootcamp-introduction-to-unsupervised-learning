@@ -49,7 +49,7 @@ Hierarchical clustering involves creating clusters that have a predetermined ord
 
 #### Divisive method
 
-Divisive hierarchical clustering or top-down clustering method works by starting with 1 cluster containing the entire data set and then partitioning the cluster to two least similar clusters.
+Divisive hierarchical clustering or top-down clustering method works by starting with 1 cluster containing the entire data set and then partitioning the cluster into two least similar clusters.
 
 We proceed recursively on each cluster until there is one cluster for each observation.
 
@@ -75,22 +75,22 @@ There are a variety of possible metrics to set how the distance between each clu
 
 ### Single-Linkage
 
-Single-linkage (nearest neighbour) is the shortest distance between a pair of observations in two clusters. For example, the distance between clusters “r” and “s” to the left is equal to the length of the arrow between their two closest points.
+Single-linkage (nearest neighbor) is the shortest distance between a pair of observations in two clusters. For example, the distance between clusters “r” and “s” to the left is equal to the length of the arrow between their two closest points.
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_a1fceb9d09e94aba91958336dafd4a07.png)
 
-It can sometimes produce clusters where observations in different clusters are closer together than to observations within their own clusters. These clusters can appear spread-out.
+It can sometimes produce clusters where observations in different clusters are closer together than observations within their own clusters. These clusters can appear spread out.
 
 ### Complete Linkage
 
-Complete-linkage (farthest neighbour) is where distance is measured between the farthest pair of observations in two clusters. For example, the distance between clusters “r” and “s” to the left is equal to the length of the arrow between their two furthest points.
+Complete-linkage (farthest neighbor) is where distance is measured between the farthest pair of observations in two clusters. For example, the distance between clusters “r” and “s” to the left is equal to the length of the arrow between their two furthest points.
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_7eb4e007791845a0ad243d08ce145dd0.png)
 
-This method usually produces tighter clusters than single-linkage, but these tight clusters can end up very close together. Along with average-linkage, it is one of the more popular distance metrics.
+This method usually produces tighter clusters than single-linkage, but these tight clusters can end up very close together. Along with average linkage, it is one of the more popular distance metrics.
 
 ### Average Linkage
 
-Average-linkage is where the distance between each pair of observations in each cluster are added up and divided by the number of pairs to get an average inter-cluster distance. For example, the distance between clusters “r” and “s” to the left is equal to the average length of each arrow between connecting the points of one cluster to the other.
+Average linkage is where the distance between each pair of observations in each cluster is added up and divided by the number of pairs to get an average inter-cluster distance. For example, the distance between clusters “r” and “s” to the left is equal to the average length of each arrow between connecting the points of one cluster to the other.
 
 
 
@@ -181,7 +181,7 @@ As the centroids move with new observations, it is possible that the smaller clu
 
 
 
-* The dendrograms for our data points will look something like below.
+* The dendrograms for our data points will look something like the below diagram.
 
 
 
@@ -204,7 +204,7 @@ As the centroids move with new observations, it is possible that the smaller clu
 
 * We can clearly visualize the steps of hierarchical clustering.
 * More the distance of the vertical lines in the dendrogram, more the distance between those clusters.
-* Once one big cluster is formed, the longest vertical distance without any horizontal line passing through it is selected and a horizontal line is drawn through it. **The number of vertical lines this newly created horizontal line passes is equal to number of clusters**. Take a look at the following plot:
+* Once one big cluster is formed, the longest vertical distance without any horizontal line passing through it is selected and a horizontal line is drawn through it. **The number of vertical lines this newly created horizontal line passes is equal to the number of clusters**. Take a look at the following plot:
 
 
 
@@ -237,7 +237,7 @@ As the centroids move with new observations, it is possible that the smaller clu
 
 
 
-* The horizontal line passes through four vertical lines resulting in four clusters: cluster of points 6,7,8 and 10, cluster of points 3,2,4 & 1, and points 9 and 5 will be treated as single point clusters.
+* The horizontal line passes through four vertical lines resulting in four clusters: cluster of points 6,7,8 and 10, cluster of points 3,2,4 & 1, and points 9 and 5 will be treated as single-point clusters.
 
 ### Notebooks
 
