@@ -26,22 +26,22 @@ Business goes well and we have about 10,000 customers in our database within a f
 
 
 
-First option is straightforward.
+The first option is straightforward.
 
 “10% oﬀ on all services” deal would do the job. However, it is less eﬃcient and less profitable compared to customer-specific deals.
 
 Furthermore, customer-specific deals are likely to be more appealing to customers.
 
-* Some customers prefer a discount on a single item while others prefer a buy-one-get-one-free kind of deal.
+* Some customers prefer a discount on a single item while others prefer a buy-one-get-one-free deal.
 * Some customers buy service A on the weekends while others buy it on Monday mornings.
 
-We can list many more different options depending on business size and number of customers.
+We can list many more different options depending on business size and the number of customers.
 
 We decide to prepare customer-specific deals.
 
-Next step is to decide what kind of deals to oﬀer. We cannot just create a diﬀerent deal for each customer. That is simply not manageable.
+The next step is to decide what kind of deals to oﬀer. We cannot just create a diﬀerent deal for each customer. That is simply not manageable.
 
-**A wise option could be detecting customers with similar interests or purchasing behavior and group them.** The criteria for grouping can be customer preferences, tastes, interests, customer-service combinations and so on.
+**A wise option could be detecting customers with similar interests or purchasing behavior and grouping them.** The criteria for grouping can be customer preferences, tastes, interests, customer-service combinations, and so on.
 
 It is extremely difficult to group customers manually. Then we ask machine learning for help. The task of grouping similar customers is called **clustering**.
 
@@ -57,7 +57,7 @@ Cluster analysis or clustering is the task of grouping a set of objects in such 
 
 Clustering can be considered the most important unsupervised learning problem. It deals with finding a structure in a collection of unlabelled data.
 
-A loose definition of clustering could be “**the process of organizing objects into groups whose members are similar in some way**”. A cluster is therefore a collection of objects which are “similar” between them and are “dissimilar” to the objects belonging to other clusters.
+A loose definition of clustering could be “**the process of organizing objects into groups whose members are similar in some way**”. A cluster is, therefore, a collection of objects which are “similar” between them and are “dissimilar” to the objects belonging to other clusters.
 
 Note: Clustering is just one type of Unsupervised Learning Algorithm. There exist many more.
 
@@ -65,11 +65,11 @@ Note: Clustering is just one type of Unsupervised Learning Algorithm. There exis
 
 ## Applications of Clustering
 
-Clustering is used in almost all the fields.
+Clustering is used in almost all fields.
 
-* Clustering helps marketers improve their customer base and work on the target areas. It helps group people (according to different criteria such as willingness, purchasing power, etc.) based on their similarity in many ways, related to the product under consideration.
-* Clustering helps in identification of groups of houses on the basis of their value, type and geographical locations.
-* Clustering is used to study earthquakes. Based on the areas hit by an earthquake in a region, clustering can help analyse the next probable location where an earthquake can occur.
+* Clustering helps marketers improve their customer base and work on the target areas. It allows group people (according to different criteria such as willingness, purchasing power, etc.) based on their similarity in many ways, related to the product under consideration.
+* Clustering helps identify groups of houses based on their value, type, and geographical locations.
+* Clustering is used to study earthquakes. Based on the areas hit by an earthquake in a region, clustering can help analyze the next probable location where an earthquake can occur.
 
 There are many more applications of clustering, such as document clustering and social network analysis. These applications are relevant in nearly every industry, making clustering a valuable skill for professionals working with data in any field.
 
@@ -77,7 +77,7 @@ Here’s a detailed list of applications. Take your time to explore it: [https:/
 
 ## Overview of Clustering Techniques
 
-You can perform clustering using many different approaches—so many, in fact, that there are entire categories of clustering algorithms. Each of these categories has its own unique strengths and weaknesses. This means that certain clustering algorithms will result in more natural cluster assignments depending on the input data.
+You can perform clustering using many different approaches—so many, in fact, that there are entire categories of clustering algorithms. Each of these categories has its unique strengths and weaknesses. This means that certain clustering algorithms will result in more natural cluster assignments depending on the input data.
 
 Selecting an appropriate clustering algorithm for your dataset is often difficult due to the number of choices available. Some important factors that affect this decision include:
 
@@ -133,7 +133,7 @@ Hierarchical clustering determines cluster assignments by building a hierarchy. 
 
 
 
-These methods produce a tree-based hierarchy of points called a **dendrogram**. Similar to partitional clustering, in hierarchical clustering the **number of clusters (k) is often predetermined by the user**. Clusters are assigned by cutting the dendrogram at a specified depth that results in k groups of smaller dendrograms.
+These methods produce a tree-based hierarchy of points called a **dendrogram**. Similar to partitional clustering, in hierarchical clustering, the **number of clusters (k) is often predetermined by the user**. Clusters are assigned by cutting the dendrogram at a specified depth that results in k groups of smaller dendrograms.
 
 Unlike many partitional clustering techniques, hierarchical clustering is a **deterministic process**, meaning cluster assignments won’t change when you run an algorithm twice on the same input data.
 
@@ -151,9 +151,9 @@ The weaknesses of hierarchical clustering methods include the following:
 
 Density-based clustering determines cluster assignments **based on the density of data points in a region**. Clusters are assigned where there are high densities of data points separated by low-density regions.
 
-Unlike the other clustering categories, this approach **doesn’t require the user to specify the number of clusters** . Instead, there is a **distance-based parameter that acts as a tuneable threshold**. This threshold determines how close points must be to be considered a cluster member.
+Unlike the other clustering categories, this approach **doesn’t require the user to specify the number of clusters**. Instead, there is a **distance-based parameter that acts as a tunable threshold**. This threshold determines how close points must be to be considered a cluster member.
 
-Examples of density-based clustering algorithms include Density-Based Spatial Clustering of Applications with Noise, or **DBSCAN**, and Ordering Points To Identify the Clustering Structure, or **OPTICS**.
+Examples of density-based clustering algorithms include Density-Based Spatial Clustering of Applications with Noise or **DBSCAN**, and Ordering Points To Identify the Clustering Structure, or **OPTICS**.
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_999099067d7e47169e2617a4bd512264.png)
 
@@ -173,6 +173,6 @@ The weaknesses of density-based clustering methods include the following:
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_3e26676b26394673a5ad37f7315a4fe9.png)
 
-### Types of Clustering Algorithms - an alternative categorisation
+### Types of Clustering Algorithms - an alternative categorization
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_eb8b3b2bafdc494c8fe5f457af68e6f5.png)
