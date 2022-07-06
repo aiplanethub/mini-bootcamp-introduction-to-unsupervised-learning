@@ -1,7 +1,6 @@
 # Clustering Algorithms: Hierarchical Clustering
 
 
-
 ## Learning Objectives
 
 * Hierarchical Clustering & Dendrogram
