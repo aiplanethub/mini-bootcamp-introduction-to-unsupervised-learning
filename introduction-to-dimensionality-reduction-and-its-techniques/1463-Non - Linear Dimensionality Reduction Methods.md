@@ -172,7 +172,7 @@ t-SNE is present as a package in sklearn’s manifold library. A simple implemen
 
 ### t-SNE Weakness
 
-* **Dimensionality reduction for other purposes:** ex: BAD for feature selection/feature extraction because it is based on probability distribution -> only for visualization!
+* **Dimensionality reduction for other purposes:** t-SNE is only useful for visualizing high-dimensional data. It is not useful for other purposes of dimensionality reduction, like feature selection or extraction.
 * **Curse of intrinsic dimensionality (sensitive to intrinsic dimension):** Intrinsic Dimension is the no. of variables needed to generate a good approximation of the signal. t-SNE performs poorly if the high dimensional data actually has high intrinsic dimensionality.
 * **Non-convexity of the t-SNE cost function:** we must choose several optimization parameters.
 
