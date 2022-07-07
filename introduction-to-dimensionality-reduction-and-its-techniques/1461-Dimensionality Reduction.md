@@ -12,7 +12,8 @@
 ## Problem & Solution
 
 **Problem:** Gone are the days when you had five variables to fit your linear regression: Modern datasets contain many more variables/features. A dataset with 50 or more features -> more than 1 million observations.
-  
+
+---
 
 **Solution:** Dimensionality Reduction using Feature Selection and Feature Extraction.
 
