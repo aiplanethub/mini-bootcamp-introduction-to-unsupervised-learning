@@ -167,7 +167,7 @@ t-SNE is present as a package in sklearn’s manifold library. A simple implemen
 
 ### t-SNE Strengths
 
-* **Works well for Non-Linear data:** It can interpret the complex relationship between features. Using this relationship, the points which are similar in high dimensions are projected close together in low dimensions.
+* **Works well for Non-Linear data:** It can interpret the relationship between features, regardless of how complex it is.
 * **Preserves Local and Global Structure:** t-SNE can preserve the data’s local and global structure. Therefore, points close by in the high-dimensional dataset also tend to be close in the low dimension dataset.
 
 ### t-SNE Weakness
