@@ -85,7 +85,7 @@ There are various kernel methods like linear, polynomial, and gaussian.
 
 High-dimensional mapping can seriously increase computation time. The question is, can we get around this problem and still benefit from high dimensions? Yes! Using the Kernel Trick.
 
-The kernel trick is a method to project original data into a higher dimension without sacrificing too much computational time. (Non-linear feature mapping).
+The kernel trick is a method to project original data into a higher dimension without sacrificing too much computational time (Non-linear feature mapping).
 
 Some popular kernels are:
 
