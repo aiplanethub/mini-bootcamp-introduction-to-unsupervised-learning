@@ -17,7 +17,7 @@ K-means clustering is one of the simplest and most popular unsupervised machine 
 
 It is intuitive, easy to implement, and fast.
 
-K = number of clusters/groups you want the data to be divided into.
+K = the number of clusters/groups you want the data to be divided into.
 
 
 
@@ -29,9 +29,9 @@ K = number of clusters/groups you want the data to be divided into.
 
 ## How does it work?
 
-K-means is an unsupervised model so the data is unlabeled. But the model mathematically allocates each data point to a cluster.
+K-means is an unsupervised model, so the data is unlabeled. But the model mathematically allocates each data point to a cluster.
 
-Here we have some 2-dimensional unlabelled data that looks like below. All the points are of the same colour(green) i.e. they are not segregated into clusters at the moment.
+Given below is some 2-dimensional unlabelled data. All the points are of the same color (green), i.e., they are not segregated into clusters at the moment.
 
 
 
@@ -41,11 +41,11 @@ Here we have some 2-dimensional unlabelled data that looks like below. All the p
 
 **STEP 0: Decide the number of clusters (K)**
 
-Upon initializing the model, we must pre-decide on a number of clusters. Having to do this in advance is a drawback of the model.
+Upon initializing the model, we must pre-decide on the number of clusters. Having to do this in advance is a drawback of the model.
 
 Let’s choose k=2 (a.k.a. 2 clusters) for this example.
 
-**STEP 1:** Randomly create centroids or points that are supposed to be the centers of the clusters (represented by purple). Note that they don’t need to be at the centers initially, they can be placed anywhere.
+**STEP 1:** Randomly create centroids or points that are supposed to be the centers of the clusters (represented by purple). They don’t need to be at the centers initially; they can be placed anywhere.
 
 
 
@@ -64,7 +64,7 @@ Let’s choose k=2 (a.k.a. 2 clusters) for this example.
 
 
 
-Initially, our clusters look like below (look at how the data is divided into red and yellow clusters):
+Initially, our clusters look like the below plot(look at how the data is divided into red and yellow clusters):
 
 
 
@@ -110,13 +110,13 @@ Which gives us clusters according to our second iteration.
 
 **STEP 5:** Repeat this process until clusters stop moving
 
-That is, when 2 consecutive times you get the same clusters, there’s no need to repeat the steps.
+That is, when you get the same clusters two consecutive times, there’s no need to repeat the steps.
 
 Is that it?
 
-Yes. Except that we can end up with some pretty poor results if the initial centroid locations are not optimal.
+Yes. Except that we can end up with pretty poor results if the initial centroid locations are not optimal.
 
-So we repeat this whole process multiple times, and accept the result with the least cumulative variation across clusters.
+So we repeat the entire process multiple times and accept the result with the least cumulative variation across clusters.
 
 ## Summary
 
@@ -163,9 +163,9 @@ So we repeat this whole process multiple times, and accept the result with the l
 
 ## Must Try!
 
-This website will allow you to visualise K-Means clustering on your own. At one point, you’ll observe that the centroid has stopped moving and the clusters remain the same. That is when you know that the algorithm has converged and given you the final clusters.
+This website will allow you to visualize K-Means clustering on your own. At one point, you’ll observe that the centroid has stopped moving, and the clusters remain the same. Now, the algorithm has converged and given you the final clusters.
 
-I strongly suggest to spend some time with this tool: [Visualizing k-means Clustering/](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+I strongly suggest spending some time with this tool: [Visualizing k-means Clustering/](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
 
 
 
@@ -181,9 +181,9 @@ I strongly suggest to spend some time with this tool: [Visualizing k-means Clust
 
 ## Choosing the number of clusters for K-means
 
-One of the most challenging tasks in this clustering algorithm is to choose the right values of k.
+One of the most challenging tasks in this clustering algorithm is to choose the correct values of k.
 
-If you are choosing the k values randomly, it might be correct or may be wrong. If you will choose the wrong value then it will directly aﬀect your model performance. So there are two methods by which you can select the right value of k.
+If you choose the k values randomly, it might be correct or wrong. If you choose the wrong value, then it will directly aﬀect your model performance. So there are two methods by which you can select the correct value of k.
 
 1. Elbow Method.
 2. Silhouette Method.
@@ -192,7 +192,7 @@ Now, Let’s understand both the concepts one by one in detail.
 
 ### Elbow Method
 
-Elbow is one of the most well-known methods by which you can select the right value of k and boost your model performance. It is also a bit naïve in its approach.
+Elbow is one of the most well-known methods by which you can select the correct value of k and boost your model performance. It is also a bit naïve in its approach.
 
 It is an empirical method to find out the best value of k. It picks up a range of values and takes the best among them. It calculates the sum of the square of the points and calculates the average distance.
 
@@ -227,7 +227,7 @@ Since the graph starts almost straightening out at 3, 3 is the optimum k value a
 
 ### Problems with Elbow Method
 
-Unfortunately, we do not always have such clearly clustered data. This means that the elbow may not be clear and sharp.
+Unfortunately, we do not always have such well-clustered data. This means that the elbow may not be clear and sharp.
 
 
 
@@ -243,9 +243,9 @@ In such an ambiguous case, we may use the Silhouette Method.
 
 The silhouette method is somewhat different. Like the elbow method, it also picks up a range of k values and draws the silhouette graph. It calculates the silhouette coefficient of every point.
 
-A higher Silhouette Coefficient score relates to a model with better defined clusters.
+A higher Silhouette Coefficient score relates to a model with better-defined clusters.
 
-For eg. in the 1st graph, you can see that cyan has a higher silhouette coefficient score. It is also the most segregated (better defined) than the other two clusters black and yellow.
+For example, in the 1st graph, you can see that cyan has a higher silhouette coefficient score. It is also the most segregated (better defined) than the other clusters, black and yellow.
 
 
 
@@ -257,7 +257,7 @@ For eg. in the 1st graph, you can see that cyan has a higher silhouette coeffici
 
 
 
-Silhouette value measures how similar a point is to its own cluster (cohesion) compared to other clusters (separation).
+Silhouette value measures how similar a point is to its cluster (cohesion) compared to other clusters (separation).
 
 * The range of the Silhouette value is between +1 and -1.
 * A high value is desirable and indicates that the point is placed in the correct cluster.
@@ -285,9 +285,9 @@ There is a clear peak at k = 3. Hence, it is optimal.
 
 ### Note
 
-The Elbow Method is more of a decision rule, while the Silhouette is a metric used for validation while clustering. Thus, it can be used in combination with the Elbow Method.
+The Elbow Method is more of a decision rule, while the Silhouette is a metric used for validation while clustering. Thus, we can use it in combination with the Elbow Method.
 
-Therefore, the Elbow Method and the Silhouette Method are not alternatives to each other for finding the optimal K. Rather they are tools to be used together for a more confident decision.
+Therefore, the Elbow Method and the Silhouette Method are not alternatives for finding the optimal K. They are tools to be used together for a more confident decision.
 
 ### Implementation of Elbow and Silhouette methods
 
@@ -307,9 +307,9 @@ This article explains both the Elbow method and the Silhouette score in detail.
 
 ### Cons:
 
-* Number of clusters must be pre-determined. K-means algorithm is not able to guess how many clusters exist in the data. Determining number of clusters may well be a challenging task.
-* Can only draw linear boundaries. If there is a non-linear structure separating groups in the data, k-means will not be a good choice.
-* Slows down as the number of samples increases because at each step, k-means algorithm accesses all data points and calculates distances.
+* Number of clusters must be pre-determined. The K-means algorithm cannot guess how many clusters exist in the data. Determining the number of clusters may well be a challenging task.
+* Can only draw linear boundaries. If a non-linear structure separates groups in the data, k-means will not be a good choice.
+* Slows down as the number of samples increases because, at each step, the k-means algorithm accesses all data points and calculates distances.
 * Sensitive to outliers
 
 ## Notebook
