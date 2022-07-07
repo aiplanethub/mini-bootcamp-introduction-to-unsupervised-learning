@@ -8,31 +8,31 @@
 
 ## Model Evaluation
 
-When you talk about validating or evaluating a machine learning model, it’s important to know that the validation techniques employed not only help in measuring performance, but also go a long way in helping you understand your model on a deeper level. This is the reason why a significant amount of time is devoted to the process of result validation and model evaluation while building a machine-learning model.
+When you talk about validating or evaluating a machine learning model, it’s essential to know that the validation techniques employed not only help in measuring performance but also go a long way in helping you understand your model on a deeper level. This is why much time is devoted to the process of result validation and model evaluation while building a machine-learning model.
 
-Result validation is a very crucial step as it ensures that our model gives good results not just on the training data but, more importantly, on the live or test data as well.
+Result validation is crucial as it ensures that our model gives good results not just on the training data but, more importantly, on the live or test data.
 
 ## How is evaluation here different from supervised learning?
 
-In case of supervised learning, evaluation is mostly done by measuring the performance metrics such as accuracy, precision, recall, AUC, etc. on the training set and the holdout sets. Such performance metrics help in deciding model viability. Then we may tune the hyper parameters and repeat the same process till we achieve the desired performance.
+In the case of supervised learning, evaluation is done mainly by measuring the performance metrics, such as accuracy, precision, recall, AUC, etc., on the training and the holdout sets. Such performance metrics help in deciding model viability. Then we may tune the hyper parameters and repeat the same process till we achieve the desired performance.
 
-However, in case of unsupervised learning, the process is not very straightforward as we do not have the ground truth (the labels). In the absence of labels, it is very diﬃcult to identify how results can be validated.
+However, in the case of unsupervised learning, the process is not very straightforward as we do not have the ground truth (the labels). In the absence of labels, it is very diﬃcult to validate our results.
 
-It is thus overall difficult to evaluate the quality of an unsupervised algorithm due to the absence of an explicit goodness metric as used in supervised learning.
+Thus, it is difficult to evaluate the quality of an unsupervised algorithm due to the absence of an explicit goodness metric, unlike supervised learning.
 
 ### Existing Domain Knowledge
 
-Let’s say we have a problem at hand to **cluster different songs in Spotify together on the basis of genres, to create different playlists**. After our work is done, how do we know it is good enough?
+Let’s say we have a problem at hand to **cluster different songs in Spotify together based on genres to create playlists**. After our work is done, how do we know it is good enough?
 
-We can verify the results of our clustering exercise through our existing knowledge of the data (for example, knowing that genre A and genre B of music are similar so if those clusters are located near, it should be correct).
+We can verify the results of our clustering exercise through our existing knowledge of the data (for example, knowing that genre A and genre B of music are similar, so if those clusters are close together, it should be correct).
 
-But what if we don’t have such prior knowledge of our data? What if the data isn’t even labelled (as is the case in many real-life clustering cases)? Even if it is, what if these labels are initially meaningless to us? There are plenty of artists that we’ve never even heard of, and if we’re trying to group thousands of tracks then it’s clearly impractical to manually verify every cluster. In these cases, we need some kind of mathematical measure for how ‘successful’ our clustering has been.
+But what if we don’t have such prior knowledge of our data? What if the data isn’t even labeled (as is the case in many real-life clustering cases)? Even if it is, what if these labels are initially meaningless to us? There are plenty of artists we’ve never even heard of, and if we’re trying to group thousands of tracks, then it’s impractical to verify every cluster manually. In these cases, we need some mathematical measure for how ‘successful’ our clustering has been.
 
 ### Example
 
-Coming back to our objective of creating clusters on the basis of genres for Spotify playlists. We have learned a number of clustering algorithms till now so we can try each of them out to create clusters.
+Returning to our objective of creating clusters based on genres for Spotify playlists, we have learned several clustering algorithms till now, so we can try each of them out to create clusters.
 
-So let’s say we implemented 4 algorithms -
+So let’s say we implemented four algorithms -
 
 Algo 1: Hierarchical Agglomerative Clustering with ward linkage
 
@@ -54,18 +54,18 @@ There are two classes of statistical techniques to validate results for cluster 
 ### **External Validation**
 
 **Metrics where original labels are required to evaluate clusters.**  
-This type of validation can be carried out if true cluster labels are available.  
-In this approach we will have a set of clusters S = {C1, C2, C3,..., Cn } which have been generated as a result of some clustering algorithm. We will have another set of clusters P = {D1, D2, D3,..., Dm} which represent the true cluster labels on the same data. The idea is to measure the statistical similarity between the two sets. A cluster set is considered as good if it is highly similar to the true cluster set.  
-In order to measure the similarity between S and P, we label each pair of records from data as Positive if the pairs belong to the same cluster in P else Negative. Similar exercise is carried out for S as well. We then compute a confusion matrix between pair labels of S and P which can be used to measure the similarity.
+We can carry out this type of validation if true cluster labels are available.  
+In this approach, we will have a set of clusters S = {C1, C2, C3,..., Cn }, generated from some clustering algorithm. We will have another set of clusters, P = {D1, D2, D3,..., Dm}, representing the true cluster labels on the same data. The idea is to measure the statistical similarity between the two sets. A cluster set is considered good if it is highly similar to the true one.  
+To measure the similarity between S and P, we label each pair of records from data as Positive if the pairs belong to the same cluster in P, else Negative. A similar exercise is carried out for S as well. We then compute a confusion matrix between pair labels of S and P, which we can use to measure the similarity.
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_5a93044bd07d4bc8b31359d0abf18cbc.png)
 
-* TP: Number of pairs of records which are in the same cluster, for both S and P.
-* FP: Number of pairs of records which are in the same cluster in S but not in P.
-* FN: Number of pairs of records which are in the same cluster in P but not in S.
-* TN: Number of pairs of records which are not in the same cluster S as well as P.
+* TP: Number of pairs of records in the same cluster for both S and P.
+* FP: Number of pairs of records in the same cluster in S but not in P.
+* FN: Number of pairs of records in the same cluster in P but not S.
+* TN: Number of pairs of records in different clusters in both S and P.
 
-On the above 4 indicators, we can calculate different metrics to get an estimate for the similarity between S (cluster labels generated by unsupervised method) and P (true cluster labels). Some example metrics which could be used are Precision, Recall and F1-score.
+We can calculate different metrics on the above four indicators to estimate the similarity between S (cluster labels generated by unsupervised method) and P (true cluster labels). Some example metrics are Precision, Recall, and F1-score.
 
 ### Matrix Representation
 
@@ -78,7 +78,7 @@ If the clustering had been perfect, we’d expect each row and each column of th
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_d8397bbf1b0f4e8a937902ac731aba4f.png)
 
 
-The default ‘ward’ linkage, which tries to minimise variance within clusters, has done a good job with all four genres, though there is some leakage into cluster B i.e. in the 2nd column, there are entries in multiple clusters and not just one.
+The default ‘ward’ linkage, which tries to minimize variance within clusters, has done an excellent job with all four genres. However, there is some leakage into cluster B, i.e., in the 2nd column, there are entries in multiple clusters, not just one.
 
 ### Matrix Representation for Algo 2
 
@@ -90,7 +90,7 @@ The default ‘ward’ linkage, which tries to minimise variance within clusters
 
 
 
-‘Complete’ linkage has clearly not worked well. It has placed a lot of the dataset into cluster A. Cluster C consists of one single rap song.
+‘Complete’ linkage has not worked well. It has placed much of the dataset into cluster A. Cluster C consists of a single rap song.
 
 ### Matrix Representation for Algo 3
 
@@ -103,7 +103,7 @@ The default ‘ward’ linkage, which tries to minimise variance within clusters
 
 
 
-‘Average’ linkage has similar issues to ‘Complete’ linkage. Many data points have been placed into a single cluster, with two clusters consisting of a single song.
+‘Average’ linkage has similar issues to the ‘Complete’ linkage. It placed many data points into a single cluster, with two clusters consisting of a single song.
 
 ### Matrix Representation for Algo 4
 
@@ -116,17 +116,17 @@ The default ‘ward’ linkage, which tries to minimise variance within clusters
 
 
 
-As with the HAC algorithm using ‘ward’ linkage, K-Means clustering has done a good job across most of the algorithms, with some jazz and rap songs being ‘mistaken’ for K-Pop.
+As with the HAC algorithm using ‘ward’ linkage, K-Means clustering has done an excellent job across most of the algorithms, with some jazz and rap songs being ‘mistaken’ for K-Pop.
 
 ### Matrix Representation
 
-While these matrices are good for ‘eyeballing’ our results, they’re far from mathematically rigorous. Let’s consider some metrics to actually help us assign a number to our cluster quality.
+While these matrices are suitable for ‘eyeballing’ our results, they’re far from mathematically rigorous. Let’s consider some metrics to help assign a number to our cluster quality.
 
 ### Adjusted Rand Index
 
-The Adjusted Rand Index attempts to express what proportion of the cluster assignments are ‘correct’. It computes a similarity measure between two different clustering methods by considering all pairs of samples, and counting pairs that are assigned in the same or different clusters predicted, against the true cluster labels, adjusting for random chance.
+The Adjusted Rand Index attempts to express the proportion of ‘correct’ cluster assignments. It computes a similarity measure between two different clustering methods by considering all pairs of samples and counting pairs assigned in the same or different clusters predicted, against the true cluster labels, adjusting for random chance.
 
-This (as well as the other metrics we’ll consider) can be evaluated using Scikit-Learn.
+This metric (as well as the other metrics we’ll consider) can be evaluated using Scikit-Learn.
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_a3a7a0b860e340449a9c496337b2a808.png)
 
@@ -138,13 +138,13 @@ The Adjusted Rand index is bounded between -1 and 1. Closer to 1 is good, while 
 
 
 
-We see that K-Means and Ward Linkage have a high score. We’d expect this, based on the matrices we previously observed.
+We see that K-Means and Ward Linkage have high scores. We’d expect this based on the matrices we previously observed.
 
 ### Fowlkes Mallows Score
 
-The Fowlkes Mallow Score is similar to Adjusted Rand Index, in as much that it tells you the degree to which cluster assignments are ‘correct’.
+The Fowlkes Mallow Score is similar to the Adjusted Rand Index in that it tells you the degree to which cluster assignments are ‘correct’.
 
-In particular, it calculates the geometric mean (special type of average where we multiply the numbers together and then take a square root (for two numbers)) between precision and recall. It’s bounded between 0 and 1, with higher values being better.
+In particular, it calculates the geometric mean (a special type of average where we multiply the numbers together and then take a square root (for two numbers)) between precision and recall. It’s bounded between 0 and 1, with higher values being better.
 
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_dddc7808500d41f28f00c4f3bfbfdefe.png)
@@ -153,7 +153,7 @@ In particular, it calculates the geometric mean (special type of average where w
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_7edf7f85006f4fe5ad32c5720a29ac2e.png)
 
 
-We similar rankings to the Adjusted Rand Index — which we would expect, given that they’re two methods of trying to answer the same question.
+We have similar rankings to the Adjusted Rand Index — which we would expect, given that they’re two methods of trying to answer the same question.
 
 ### More external validation techniques
 
@@ -164,11 +164,11 @@ A few more external validation techniques include:
 
 ### Drawbacks of External Validation
 
-Business/User validation, as the name suggests, requires inputs that are external to the data.
+Business/User validation, as the name suggests, requires external inputs to the data.
 
-The idea is to generate clusters on the basis of the knowledge of subject matter experts and then evaluate similarity between the two sets of clusters i.e. the clusters generated by ML and clusters generated as a result of human inputs.
+The idea is to generate clusters based on the knowledge of subject matter experts and then evaluate the similarity between the two sets of clusters, i.e., the clusters generated by ML and clusters generated as a result of human inputs.
 
-However, in most of the cases, such knowledge is not readily available. Also, this approach is not very scalable. Hence, in practice, external validation is usually skipped.
+However, in most cases, such knowledge is not readily available. Also, this approach is not very scalable. Hence, in practice, external validation is usually skipped.
 
 ### **Internal validation**
 
@@ -176,7 +176,7 @@ However, in most of the cases, such knowledge is not readily available. Also, th
 
 ### Why Internal Validation?
 
-Given that dealing with unlabelled data is one of the main use cases of unsupervised learning, we require some other metrics that evaluate clustering results without needing to refer to ‘true’ labels.
+Given that dealing with unlabelled data is one of the primary use cases of unsupervised learning, we require some other metrics that evaluate clustering results without needing to refer to ‘true’ labels.
 
 ### How Internal Validation?
 
@@ -189,7 +189,7 @@ Most of the literature related to internal validation for cluster learning revol
 
 ### Intuition
 
-Suppose we have the following results from 3 separate clustering analysis.
+Suppose we have the following results from 3 separate clustering analyses.
 
 
 
@@ -226,11 +226,11 @@ Suppose we have the following results from 3 separate clustering analysis.
 
 
 
-Evidently, the ‘tighter’ we can make our clusters, the better. Is there some way to give a number to this idea of ‘tightness’?
+The ‘tighter’ we can make our clusters, the better. Is there some way to give a number to this idea of ‘tightness’?
 
 ### Internal Validation Metrics
 
-In practice, instead of dealing with two metrics, several measures are available which combine cohesion and coupling into a single measure. Few examples of such measures are:
+Instead of using two metrics, several measures are available that combine cohesion and coupling into a single measure. A few examples of such measures are:
 
 * Silhouette coefficient
 * Calisnki-Harabasz coefficient
@@ -240,7 +240,7 @@ In practice, instead of dealing with two metrics, several measures are available
 
 ### Silhouette Score
 
-The Silhouette Score attempts to describe how similar a data point is to other data points in its cluster, relative to data points not in its cluster (this is aggregated over all data points to get the score for an overall clustering). In other words, it thinks about how ‘distinct’ the clusters are in space — indeed one could use any measure of ‘distance’ to calculate the score.
+The Silhouette Score describes how similar a data point is to other data points in its cluster relative to data points not in its cluster (this is aggregated over all data points to get the score for an overall clustering). In other words, it thinks about how ‘distinct’ the clusters are in space — indeed, one could use any measure of ‘distance’ to calculate the score.
 
 It is bounded between -1 and 1. Closer to -1 suggests incorrect clustering, while closer to +1 shows that each cluster is very dense.
 
@@ -251,13 +251,13 @@ It is bounded between -1 and 1. Closer to -1 suggests incorrect clustering, whil
 
 
 
-We see that none of the clusters have super-high Silhouette Scores. Interestingly, we see that the Average Linkage clusters have the highest scores. Remember, however, that this algorithm produced two clusters that each contained just a single data point, which is unlikely to be a desirable outcome in a real-world situation (a lesson that you often can’t rely on a single metric to make decisions about the quality of an algorithm!).
+We see that none of the clusters have super-high Silhouette Scores. Interestingly, we see that the Average Linkage clusters have the highest scores. Remember, however, that this algorithm produced two clusters containing just a single data point. This is unlikely to be a desirable outcome in a real-world situation (a lesson that you often can’t rely on a single metric to make decisions about the quality of an algorithm!).
 
 ### Calinski Harabaz Index
 
-The Calinski Harabaz Index is the ratio of the variance of a data point compared to points in other clusters, against the variance compared to points within its cluster.
+The Calinski Harabaz Index is the ratio of the variance of a data point compared to points in other clusters against the variance compared to points within its cluster.
 
-Since we want this first part to be high, and the second part to be low, a **high CH index is desirable**. Unlike other metrics we have seen, this score is not bounded.
+Since we want this first part to be high and the second to be low, a **high CH index is desirable**. Unlike other metrics we have seen, this score is not bounded.
 
 ![image.png](https://dphi-live.s3.amazonaws.com/media_uploads/image_61a9a0324af64134824dffe94ac0acc8.png)
 
@@ -269,10 +269,10 @@ Here we see that our K-Means and Ward Linkage algorithms score highly. The Compl
 
 You might want to explore a technique called ‘Twin-Sample Validation’.
 
-It should be used in combination with internal validation and can prove to be highly useful in case of time-series data where we want to ensure that our results remain same across time. (If you want to learn more about time-series analysis, check out our [Course on Introduction to Time Series Analysis](https://dphi.tech/courses/introduction-to-time-series-analysis).)
+It should be used in combination with internal validation and can prove to be highly useful in the case of time-series data where we want to ensure that our results remain the same across time. (If you want to learn more about time-series analysis, check out our [Course on Introduction to Time Series Analysis](https://dphi.tech/courses/introduction-to-time-series-analysis).)
 
 ### Conclusion
 
 So this brings us to the end of this unit.
 
-This was written with the sole purpose to cover the most important and most commonly used machine learning model evaluation metrics and bring some clarity towards the meaning of these evaluation metrics. I hope this might have helped you in some way and motivated you to pick up the right metric for your use-case in order to evaluate how good a machine learning model you have built.
+The purpose of this unit was to cover the most important and most commonly used model evaluation metrics in machine learning and clarify the meaning of these metrics. I hope this might have helped you and motivated you to pick the right metric for your use case, to evaluate the goodness of the machine learning model you built.
