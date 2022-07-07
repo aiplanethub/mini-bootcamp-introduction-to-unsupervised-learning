@@ -119,7 +119,7 @@ t-Distributed Stochastic Neighbor Embedding (t-SNE) is a non-linear technique fo
 
 Until recently, it was the best, state-of-the-art dimensionality reduction technique. Now, it has been replaced by a better and faster method called **UMAP**.
 
-t-SNE basically decreases the multi-dimension to 2d or 3d dimensions such that the human eyes can visualize it. This reduces the data analysis work as it can reveal various patterns in the data set in 2d or 3d.
+t-SNE basically reduces the multi-dimensional data into 2 or 3 dimensions such that the human eyes can visualize it. This reduces the data analysis work as it can reveal various patterns in the data set in 2d or 3d.
 
 ### Visualizing 784 dimensions in 2d using t-SNE
 
