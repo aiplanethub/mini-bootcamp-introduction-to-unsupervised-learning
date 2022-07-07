@@ -7,7 +7,7 @@
 * t-distributed Stochastic Neighbor Embedding (t-SNE)
 * Self-Organizing Map (SOM)
 
-### Non-linear Dimensionality Reduction Methods
+## Non-linear Dimensionality Reduction Methods
 
 Non-linear transformation methods, also known as **manifold learning methods**, are used when the data doesn’t lie on a linear subspace. It is based on the **manifold hypothesis**, which says that **in a high dimensional structure, most relevant information is concentrated in a small number of low dimensional manifolds**.
 
@@ -28,9 +28,9 @@ Didn’t understand the basic definitions completely?
 
 No worries, we’ll now elaborate on some popularly used Non-Linear Dimensionality Reduction methods.
 
-### Kernel PCA
+## Kernel PCA
 
-We’ve read about PCA till now. PCA is a linear method. That is, we can only apply it to linearly separable datasets. It does an excellent job for linearly separable datasets. But, many real-world data are not linearly separable. So if we use it on non-linear datasets, we might get a result that is not optimal.
+We’ve read about PCA till now. PCA is a linear method. That is, we can only apply it to linearly separable datasets. It does an excellent job for linearly separable datasets. But, many real-world datasets are not linearly separable. So if we use it on non-linear datasets, we might get a result that is not optimal.
 
 Kernel PCA uses a kernel function to project the dataset into a higher dimensional feature space, where it is linearly separable. It is similar to the idea of Support Vector Machines.
 
@@ -115,7 +115,7 @@ Below you can see a sample implementation of Kernel PCA. The kernel used here is
 
 
 
-### t-distributed Stochastic Neighbor Embedding (tSNE)
+## t-distributed Stochastic Neighbor Embedding (tSNE)
 
 t-Distributed Stochastic Neighbor Embedding (t-SNE) is a non-linear technique for dimensionality reduction that is particularly well suited for the **visualization of high-dimensional datasets**. It is extensively applied in image processing, NLP, genomic data, and speech processing.
 
@@ -182,7 +182,7 @@ t-SNE is present as a package in sklearn’s manifold library. A simple implemen
 
 Here’s an amazing article you can go through to understand t-SNE in detail: [https://towardsdatascience.com/what-why-and-how-of-t-sne-1f](https://towardsdatascience.com/what-why-and-how-of-t-sne-1f78d13e224d) [78d13e224d](https://towardsdatascience.com/what-why-and-how-of-t-sne-1f78d13e224d)
 
-### Self-Organizing Map (SOM) or Self-Organizing Feature Map (SOFM)
+## Self-Organizing Map (SOM) or Self-Organizing Feature Map (SOFM)
 
 A self-organizing map (SOM) is a type of artificial neural network (ANN) that is trained using unsupervised learning to produce a **low-dimensional (typically two-dimensional), discretized representation of the input space of the training samples**, called a **map**, and is, therefore, a method to perform dimensionality reduction.
 
