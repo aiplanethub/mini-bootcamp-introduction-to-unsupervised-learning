@@ -214,6 +214,6 @@ It is a simple, Numpy-based implementation of the Self-Organizing Maps and is ve
 * [How SOM (Self Organizing Maps) algorithm works](https://youtu.be/H9H6s-x-0YE)
 * [SOM Tutorial](https://algobeans.com/2017/11/02/self-organizing-map/)
 
-### Notebook
+## Notebook
 
 [Implementation of various linear and non-linear dimensionality reduction techniques](https://dphi.tech/notebooks/1326/gunnika/comparison-of-various-dimensionality-reduction-techniques-in-python)
