@@ -9,13 +9,13 @@
 
 ### Auto-encoders
 
-Another popular dimensionality reduction method that gives spectacular results are auto-encoders, a type of artificial neural network that aims to copy their inputs to their outputs.
+Auto-encoders are another popular dimensionality reduction method that gives spectacular results. Auto-encoders are artificial neural networks that aim to copy their inputs to their outputs.
 
-Its procedure starts compressing the original data into a shortcode ignoring noise. Then, the algorithm uncompresses that code to generate an image as close as possible to the original input.
+Its procedure compresses the original data into a shortcode, ignoring the noise. Then, the algorithm uncompresses that code to generate an image close to the initial input.
 
 ### Components of Auto-encoders
 
-An autoencoder is composed of two parts :
+An auto-encoder is composed of two parts :
 
 1. **Encoder:** compresses the input into a latent-space representation.
 2. **Decoder:** reconstruct the input from the latent space representation.
@@ -57,7 +57,7 @@ An autoencoder is composed of two parts :
 
 
 
-You might notice that the reconstructed images are a little blurry and not so detailed. But, they still retain the same structure.
+You might notice that the reconstructed images are a little blurry and not detailed. But, they still retain the same structure.
 
 ### Applications of Auto-encoders
 
@@ -69,7 +69,7 @@ You might notice that the reconstructed images are a little blurry and not so de
 * Sequence to sequence prediction
 * Recommendation system
 
-### Autoencoder
+### Auto-encoder
 
 
 
@@ -87,6 +87,6 @@ You might notice that the reconstructed images are a little blurry and not so de
 
 ### Additional Resources
 
-Autoencoders involve the concept of Deep Learning. So make sure you’re familiar with it before starting with implementation of Autoencoders. We’ll not be diving into it at the moment. If you want an introduction to Deep Learning, consider checking out our [Getting Started with Deep Learning Course.](https://dphi.tech/courses/getting-started-with-deep-learning) It's free!
+Auto-encoders involve the concept of Deep Learning. So make sure you’re familiar with it before starting with the implementation. We’ll not be diving into it at the moment. If you want an introduction to Deep Learning, consider checking out our [Getting Started with Deep Learning Course](https://dphi.tech/courses/getting-started-with-deep-learning). It’s free!
 
 [Implementation of Autoencoders on MNIST Dataset](https://pub.towardsai.net/autoencoders-for-dimensionality-reduction-6fb6553f392f)
